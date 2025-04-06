@@ -1,0 +1,34 @@
+{
+    "files.associations": {
+        "can.h": "c",
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "bridge.h": "c",
+        "freertos.h": "c",
+        "queue.h": "c",
+        "stdbool.h": "c",
+        "cmath": "c",
+        "compare": "c",
+        "concepts": "c",
+        "exception": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "*.tcc": "c",
+        "typeinfo": "c",
+        "__config": "c",
+        "config.h": "c",
+        "cmsis_os.h": "c",
+        "stm32f1xx_hal_can.h": "c",
+        "cmsis_os2.h": "c",
+        "unity.h": "c",
+        "car.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": true,
+    "cortex-debug.armToolchainPath": "/opt/homebrew/bin",
+    "cortex-debug.openocdPath": "/opt/homebrew/bin/openocd",
+    "C_Cpp.default.compilerPath": "/opt/homebrew/bin/gcc-14",
+    "cSpell.words": [
+        "AZEO"
+    ]
+}

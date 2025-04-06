@@ -1,0 +1,43 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "App/Inc",
+                "Core/Inc",
+                "Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "Drivers/CMSIS/Include",
+                "Drivers/STM32F1xx_HAL_Driver/Inc",
+                "Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+                "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                "Middlewares/Third_Party/FreeRTOS/Source/include",
+                "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
+            ],
+            "defines": [
+                "STM32F105xC",
+                "USE_HAL_DRIVER"
+            ],
+            "compilerPath": "/opt/homebrew/bin/arm-none-eabi-gcc"
+        },
+        {
+            "name": "Test",
+            "includePath": [
+                "App/Inc",
+                "Core/Inc",
+                "Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "Drivers/CMSIS/Include",
+                "Drivers/STM32F1xx_HAL_Driver/Inc",
+                "Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+                "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                "Middlewares/Third_Party/FreeRTOS/Source/include",
+                "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3",
+                "Test/Unity"
+            ],
+            "defines": [
+                "UNIT_TEST"
+            ],
+            "compilerPath": "/usr/bin/gcc"
+        }
+    ],
+    "version": 4
+}

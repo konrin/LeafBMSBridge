@@ -1,0 +1,84 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/LeafBMSBridge.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "svdFile": "STM32F105.svd",
+            "configFiles": [
+                "interface/stlink-v2.cfg",
+                "target/stm32f1x.cfg"
+            ]
+        },
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/debug/LeafBMSBridge.elf",
+            "name": "Debug STM32",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f105xc.s",
+            "configFiles": [
+                "openocd.cfg"
+            ]
+        },
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/debug/LeafBMSBridge.elf",
+            "name": "Attach STM32",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f105xc.s",
+            "configFiles": [
+                "openocd.cfg"
+            ]
+        },
+        {
+            "name": "C/C++: arm-none-eabi-gcc build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: arm-none-eabi-gcc build active file"
+        },
+        {
+            "name": "Debug CAN Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Test/test1.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Test",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+        },
+        {
+            "name": "PG can 5c0",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Playground/can_5c0/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Playground/can_5c0",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+        }
+    ]
+}
